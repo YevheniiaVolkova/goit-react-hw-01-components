@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const Table = styled.table`
     width: 100%;
     text-align: center;
+
+     box-shadow: ${(props) => props.theme.colors.boxShadow};
+
     
     & thead th {
         padding: 10px;
@@ -10,7 +13,8 @@ export const Table = styled.table`
         font-size: 16px;
         line-height: 14px;
         letter-spacing: 0.02em;
-        
+        background-color: ${(props) => props.theme.colors.blue};
+        color: ${(props) => props.theme.colors.white};
         text-transform: uppercase;
     }
     & tbody td {
@@ -21,7 +25,7 @@ export const Table = styled.table`
         letter-spacing: 0.03em;
     }
     & tbody tr:nth-child(even) {
-       
+        background-color: ${(props) => props.theme.colors.backgroundTable};;
     }
     
     

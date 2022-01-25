@@ -16,16 +16,27 @@ export const Item = styled.li`
     padding: 10px 15px;
     width: 100%;
     margin-bottom: 15px;
+     box-shadow: ${(props) => props.theme.colors.boxShadow};
+     background-color:${(props) => props.theme.colors.white};
    
 `;
 
 
 export const Status = styled.span`
-    content: '';
+   content: '';
     width: 15px;
     height: 15px;
     border-radius: 50%;
-   
+    background-color: ${({ isOnline, theme }) => {
+    switch (isOnline) {
+        case 'true':
+            return theme.colors.green;
+        case 'false':
+            return theme.colors.red;
+        default:
+            return theme.colors.black;
+        }
+    }};
     margin-right: 15px;
 `;
 

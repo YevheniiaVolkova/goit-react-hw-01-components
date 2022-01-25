@@ -1,8 +1,11 @@
 import styled from 'styled-components';
+import { randomColor } from '../../randomColor';
 
 export const StatisticsSection = styled.section`
-   
-    margin-bottom: 5px;
+     box-shadow: ${(props) => props.theme.colors.boxShadow};
+     background-color:${(props) => props.theme.colors.white};
+    margin-bottom: 35px;
+    
 `;
 
 
@@ -25,10 +28,10 @@ export const Item = styled.li`
     flex-direction: column;
     justify-content: center;
     width: calc(100% / 5);
-    padding: 5px 5px;
+    padding: 20px 10px;
     text-align: center;
-    
-    
+    color: ${(props) => props.theme.colors.white};
+    background-color: ${randomColor};  
 `;
 
 

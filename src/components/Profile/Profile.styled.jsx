@@ -7,6 +7,8 @@ export const SectionProfile = styled.div`
     width: 290px;
     height: 346px;
     border-radius: 5px 5px;
+    box-shadow: ${(props) => props.theme.colors.boxShadow};
+    background-color: ${(props) => props.theme.colors.white};
 `;
 
 export const User = styled.div`
@@ -49,6 +51,8 @@ export const StatsList = styled.ul`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: ${(props) => `1px solid ${props.theme.colors.borderProfile}`};
+    background-color: ${(props) => props.theme.colors.blueGray};
 `;
 
 export const StatsItem = styled.li`
